@@ -1,5 +1,5 @@
 -----------------------------------------------------------------------------------------
--- 示範如何載入並播放音樂/效，更多Audio Lib資訊請參考以下網址
+-- 示範如何載入並播放音樂/效，並介紹Tap事件的偵聽。更多Audio Lib資訊請參考以下網址
 -- https://docs.coronalabs.com/daily/api/library/audio/index.html
 -- Author: Zack Lin
 -- Time: 2015/3/13
@@ -33,6 +33,9 @@ btn_stop.x = _SCREEN.CENTER.X
 btn_stop.y = _SCREEN.CENTER.Y + 150
 
 --函式宣告
+--可透過設定system.setTapDelay來優化多點觸控時間，否則每只的觸碰都會被視為單一
+--的Tap
+
 --播放音源
 function btn_sound:tap( e )
 	audio.play( sound )
